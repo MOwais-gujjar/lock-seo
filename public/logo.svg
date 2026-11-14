@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 64" fill="none">
+  <defs>
+    <linearGradient id="logoLockBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="logoShackle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#00BAFF"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="logoBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00BAFF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Lock Icon -->
+  <g transform="translate(6, 8)">
+    <rect x="0" y="0" width="48" height="48" rx="14" fill="url(#logoLockBg)" stroke="url(#logoBorder)" stroke-width="2"/>
+    <path d="M17 21V15C17 11.134 20.134 8 24 8C27.866 8 31 11.134 31 15V21" stroke="url(#logoShackle)" stroke-width="3.5" stroke-linecap="round"/>
+    <rect x="12" y="20" width="24" height="20" rx="6" fill="#0B132B" stroke="#00BAFF" stroke-width="2"/>
+    <circle cx="24" cy="29.5" r="2.8" fill="#00BAFF"/>
+    <path d="M22.5 31L25.5 31L24.8 35.5L23.2 35.5Z" fill="#00BAFF"/>
+    <circle cx="24" cy="29.5" r="1.1" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <text x="66" y="36" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="900" fill="#F8FAFC" letter-spacing="-0.03em">
+    LOCK
+  </text>
+  <g transform="translate(136, 16)">
+    <rect x="0" y="0" width="56" height="26" rx="7" fill="#00BAFF" fill-opacity="0.15" stroke="#00BAFF" stroke-width="1.5"/>
+    <text x="28" y="18" font-family="system-ui, -apple-system, monospace" font-size="14" font-weight="800" fill="#00BAFF" text-anchor="middle" letter-spacing="0.05em">
+      SEO
+    </text>
+  </g>
+  <text x="67" y="50" font-family="system-ui, -apple-system, monospace" font-size="9" font-weight="600" fill="#94A3B8" letter-spacing="0.1em">
+    PRECISION AUDIT ENGINE
+  </text>
+</svg>

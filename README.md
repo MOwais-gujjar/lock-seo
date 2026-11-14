@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔒 Lock SEO — Local SEO & Competitor Analysis Toolkit
 
-## Getting Started
+A high-precision, technical on-page SEO auditing, keyword frequency & density analysis, and competitor backlink intelligence toolkit built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ⚡ Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **🛡️ 5-Pillar Weighted SEO Health Engine (100-Point Model)**:
+  - **Crawlability & Indexability (25 pts)**: HTTP status code validation, robots.txt directives (`noindex`/`nofollow`), and canonical URL validation.
+  - **Core On-Page Metadata (30 pts)**: Title tag optimization (20–65 chars) and meta description evaluation (60–165 chars).
+  - **Content Structure & Hierarchy (20 pts)**: Single primary `<h1>` verification, `<h2>`/`<h3>` subheadings hierarchy, and interactive web application recognition (no unfair thin-content penalties for utility apps).
+  - **Semantic Accessibility & Mobile (15 pts)**: Responsive `<meta name="viewport">` check and 100% `<img>` alt attribute coverage analysis.
+  - **Performance, Rich Snippets & Delivery (10 pts)**: Real-time Time to First Byte (TTFB), Schema.org JSON-LD structured data, and OpenGraph/Twitter social cards.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **📊 Clean N-Gram Keyword Density Engine**:
+  - Extracts 1-word (single terms), 2-word (bigrams), and 3-word (trigrams) keyword frequencies and density percentages.
+  - Strips currency expressions (`$250,000.00`), decimals, and zero-padded numbers so tables and prices don't pollute keywords.
+  - Preserves legitimate technical alphanumeric terms (`ipv6`, `b2b`, `web3`, `4k`, `3d`, `win11`, `oauth2`).
+  - **1-Click Dual Copy**: Copy ranked list with counts & densities, or clean comma-separated list (CSV) ready for Google Ads / spreadsheets.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **🌐 Live Backlink Discovery & Domain Authority**:
+  - Resilient 3-tier backlink discovery pipeline:
+    - **Tier 1**: Common Crawl CDX Index API query for real indexed web references.
+    - **Tier 2**: DuckDuckGo Lite search-operator parsing (`"${domain}" -site:${domain}`).
+    - **Tier 3**: Verified structured developer & software footprint generator (GitHub, Reddit, StackOverflow, AlternativeTo, SaaSHub).
+  - **Live Global Rank & Traffic Intelligence**: Dual integration with **OpenPageRank API** and **Tranco Top 1M Global Index** for genuine worldwide rank and realistic traffic tier estimation.
 
-## Learn More
+- **💾 Zero-Database Local Scan History**:
+  - Persists full scan snapshots and health scores locally in the browser (`localStorage`).
+  - 1-click instant audit restoration with zero network delay.
 
-To learn more about Next.js, take a look at the following resources:
+- **📥 Multi-Format Report Export**:
+  - **JSON**: Full hierarchical audit payload with all technical metrics.
+  - **Multi-Section CSV**: RFC-4180 compliant formatted spreadsheet report with executive summary, actionable issues, passed checks, and full keyword density tables.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **🌓 Technical Engineering UI**:
+  - Minimalist dark/light mode architecture matching modern developer tools.
+  - Tabular monospace font (`JetBrains Mono`) for metrics, timings, and densities.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 Getting Started
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Prerequisites
+- **Node.js** (v18.17 or later recommended)
+- **npm**, **pnpm**, or **yarn**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/MOwais-gujjar/lock-seo.git
+   cd lock-seo
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables (Optional)**:
+   Copy `.env.example` to `.env.local`:
+   ```bash
+   cp .env.example .env.local
+   ```
+   Add your free OpenPageRank API key (get 30,000 free domain queries/month at [openpagerank.keywordseverywhere.com](https://openpagerank.keywordseverywhere.com/dashboard)):
+   ```env
+   OPENPAGERANK_API_KEY=your_key_here
+   ```
+   *(Note: If no key is configured, Lock SEO automatically falls back to the live Tranco Top 1M Global Index with zero configuration).*
+
+4. **Run Development Server**:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+5. **Build for Production**:
+   ```bash
+   npm run build
+   npm run start
+   ```
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) 16 (App Router + Turbopack)
+- **Language**: [TypeScript](https://www.typescriptlang.org/) (Strict Mode)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **DOM & HTML Parser**: [Cheerio](https://cheerio.js.org/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Image Processing**: [Sharp](https://sharp.pixelplumbing.com/)
+
+---
+
+## 📄 License
+
+MIT License. Free for personal and commercial use.
