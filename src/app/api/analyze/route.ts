@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { analyzeOnPageSEO, SEOFetchError } from "@/lib/seo-analyzer";
 import type { SEOAuditResult } from "@/types/seo";
 
+export const dynamic = "force-dynamic";
+
 /**
  * Normalizes and validates an incoming URL string.
  * Automatically prepends `https://` if no protocol is provided.

@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { discoverBacklinksAndAuthority, normalizeDomain } from "@/lib/backlink-finder";
 import type { BacklinkAnalysisResult } from "@/types/seo";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(
   request: NextRequest
 ): Promise<

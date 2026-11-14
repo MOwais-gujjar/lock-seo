@@ -84,6 +84,32 @@ A high-precision, technical on-page SEO auditing, keyword frequency & density an
 
 ---
 
+## ☁️ Deploying to Cloudflare
+
+Lock SEO is pre-configured with `@opennextjs/cloudflare` and `wrangler.jsonc` / `wrangler.toml` for seamless deployment to Cloudflare Workers and Cloudflare Pages.
+
+### Option 1: Cloudflare Dashboard (GitHub Integration)
+1. Go to your **Cloudflare Dashboard** -> **Workers & Pages** -> **Create application** -> **Pages** (or **Workers**).
+2. Connect your GitHub repository (`lock-seo`).
+3. Set the build configuration:
+   - **Framework preset**: `None` or `Next.js`
+   - **Build command**: `npx @opennextjs/cloudflare build` (or `npm run build:worker`)
+   - **Deploy command / Output directory**:
+     - For Cloudflare Workers: `npx @opennextjs/cloudflare deploy`
+     - For Cloudflare Pages: Build output directory `.open-next/assets`
+   - **Compatibility flags**: `nodejs_compat, global_fetch_strictly_public`
+   - **Compatibility date**: `2025-02-01`
+4. In **Settings -> Environment variables**, add:
+   - `OPENPAGERANK_API_KEY`: *(Your OpenPageRank API key)*
+
+### Option 2: Deploy from CLI with Wrangler
+```bash
+npm run build:worker
+npx wrangler deploy
+```
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/) 16 (App Router + Turbopack)

@@ -131,7 +131,7 @@ export async function analyzeOnPageSEO(
 
   const finalUrl = response.url || parsedTarget.toString();
   const baseUrl = new URL(finalUrl);
-  const htmlSizeBytes = Buffer.byteLength(html, "utf8");
+  const htmlSizeBytes = new TextEncoder().encode(html).length;
 
   // 1. Keyword Extraction & Density Engine (using raw HTML already fetched)
   const keywords = extractKeywordMetrics(html);
